@@ -1,0 +1,8 @@
+.venv/
+.qa/
+__pycache__/
+*.pyc
+.env
+private-data/
+*.tmp
+.writer.lock

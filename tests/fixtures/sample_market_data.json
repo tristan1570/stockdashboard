@@ -1,0 +1,422 @@
+{
+  "source": "Market Daily simulation",
+  "indices": [
+    [
+      "^GSPC",
+      "S&P 500",
+      6235
+    ],
+    [
+      "^IXIC",
+      "Nasdaq Composite",
+      19844
+    ],
+    [
+      "^DJI",
+      "Dow Jones Industrial Average",
+      42683
+    ]
+  ],
+  "securities": [
+    {
+      "symbol": "ASTQ",
+      "name": "Aster Signal",
+      "exchange": "NASDAQ",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 21,
+      "market_cap_usd": 10000000000
+    },
+    {
+      "symbol": "BCIR",
+      "name": "Beacon Circuits",
+      "exchange": "NYSE",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 22.6,
+      "market_cap_usd": 13720000000
+    },
+    {
+      "symbol": "CBTR",
+      "name": "Cobalt Robotics",
+      "exchange": "NYSE AMERICAN",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 26.2,
+      "market_cap_usd": 17440000000
+    },
+    {
+      "symbol": "DLST",
+      "name": "Delta Storage",
+      "exchange": "NASDAQ",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 31.36,
+      "market_cap_usd": 21160000000
+    },
+    {
+      "symbol": "ELHR",
+      "name": "Elm Harbor REIT",
+      "exchange": "NYSE",
+      "security_type": "REIT_COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 37.89,
+      "market_cap_usd": 24880000000.000004
+    },
+    {
+      "symbol": "FBLS",
+      "name": "Fable Systems",
+      "exchange": "NYSE AMERICAN",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 45.68,
+      "market_cap_usd": 28600000000
+    },
+    {
+      "symbol": "GNWK",
+      "name": "Granite Works",
+      "exchange": "NASDAQ",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 54.65,
+      "market_cap_usd": 32320000000
+    },
+    {
+      "symbol": "HLXN",
+      "name": "Helix Networks",
+      "exchange": "NYSE",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 64.73,
+      "market_cap_usd": 36040000000.00001
+    },
+    {
+      "symbol": "IGMT",
+      "name": "Indigo Materials",
+      "exchange": "NYSE AMERICAN",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 75.87,
+      "market_cap_usd": 39760000000.00001
+    },
+    {
+      "symbol": "JNLB",
+      "name": "Juniper Labs",
+      "exchange": "NASDAQ",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 88.04,
+      "market_cap_usd": 43480000000.00001
+    },
+    {
+      "symbol": "KSDE",
+      "name": "Kestrel Devices",
+      "exchange": "NYSE",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 101.19,
+      "market_cap_usd": 47200000000
+    },
+    {
+      "symbol": "LDEN",
+      "name": "Linden Energy",
+      "exchange": "NYSE AMERICAN",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 115.29,
+      "market_cap_usd": 50920000000
+    },
+    {
+      "symbol": "MORE",
+      "name": "Mosaic Retail",
+      "exchange": "NASDAQ",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 130.33,
+      "market_cap_usd": 54640000000
+    },
+    {
+      "symbol": "NSTR",
+      "name": "Northstar Transit",
+      "exchange": "NYSE",
+      "security_type": "ADR",
+      "active": true,
+      "currency": "USD",
+      "base_price": 146.26,
+      "market_cap_usd": 58360000000
+    },
+    {
+      "symbol": "ORHE",
+      "name": "Orchid Health",
+      "exchange": "NYSE AMERICAN",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 163.08,
+      "market_cap_usd": 62080000000.00001
+    },
+    {
+      "symbol": "PNIN",
+      "name": "Pioneer Instruments",
+      "exchange": "NASDAQ",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 180.76,
+      "market_cap_usd": 65800000000.00001
+    },
+    {
+      "symbol": "QZLG",
+      "name": "Quartz Logic",
+      "exchange": "NYSE",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 199.29,
+      "market_cap_usd": 69520000000.00002
+    },
+    {
+      "symbol": "RGWB",
+      "name": "Ridgewell Bank",
+      "exchange": "NYSE AMERICAN",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 21,
+      "market_cap_usd": 73240000000.00002
+    },
+    {
+      "symbol": "SLFD",
+      "name": "Solace Foods",
+      "exchange": "NASDAQ",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 22.6,
+      "market_cap_usd": 76960000000.00002
+    },
+    {
+      "symbol": "TMFR",
+      "name": "Tamarack Freight",
+      "exchange": "NYSE",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 26.2,
+      "market_cap_usd": 80680000000
+    },
+    {
+      "symbol": "UMME",
+      "name": "Umber Metals",
+      "exchange": "NYSE AMERICAN",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 31.36,
+      "market_cap_usd": 84400000000
+    },
+    {
+      "symbol": "VLTX",
+      "name": "Valeon Textiles",
+      "exchange": "NASDAQ",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 37.89,
+      "market_cap_usd": 88120000000
+    },
+    {
+      "symbol": "WLMO",
+      "name": "Willow Motors",
+      "exchange": "NYSE",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 45.68,
+      "market_cap_usd": 91840000000
+    },
+    {
+      "symbol": "XYPO",
+      "name": "Xylen Power",
+      "exchange": "NYSE AMERICAN",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 54.65,
+      "market_cap_usd": 95560000000
+    },
+    {
+      "symbol": "YRMD",
+      "name": "Yarrow Medical",
+      "exchange": "NASDAQ",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 64.73,
+      "market_cap_usd": 99280000000
+    },
+    {
+      "symbol": "ZPTO",
+      "name": "Zephyr Tools",
+      "exchange": "NYSE",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 75.87,
+      "market_cap_usd": 103000000000
+    },
+    {
+      "symbol": "ACOP",
+      "name": "Acorn Optics",
+      "exchange": "NYSE AMERICAN",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 88.04,
+      "market_cap_usd": 424326000
+    },
+    {
+      "symbol": "BRWA",
+      "name": "Briar Water",
+      "exchange": "NASDAQ",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 101.19,
+      "market_cap_usd": 424377000
+    },
+    {
+      "symbol": "CECO",
+      "name": "Cedar Copper",
+      "exchange": "NYSE",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 115.29,
+      "market_cap_usd": 424428000
+    },
+    {
+      "symbol": "DOMI",
+      "name": "Dover Micro",
+      "exchange": "NYSE AMERICAN",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 130.33,
+      "market_cap_usd": 424479000
+    },
+    {
+      "symbol": "EVSO",
+      "name": "Everly Solar",
+      "exchange": "NASDAQ",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 146.26,
+      "market_cap_usd": 424530000
+    },
+    {
+      "symbol": "FNAU",
+      "name": "Finch Audio",
+      "exchange": "NYSE",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 163.08,
+      "market_cap_usd": 424581000
+    },
+    {
+      "symbol": "GRST",
+      "name": "Grove Steel",
+      "exchange": "NYSE AMERICAN",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 180.76,
+      "market_cap_usd": 424632000
+    },
+    {
+      "symbol": "HVFD",
+      "name": "Haven Foods",
+      "exchange": "NASDAQ",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 0.48,
+      "market_cap_usd": 424683000
+    },
+    {
+      "symbol": "IOIM",
+      "name": "Ion Imaging",
+      "exchange": "NYSE",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 21,
+      "market_cap_usd": 424734000
+    },
+    {
+      "symbol": "JSMB",
+      "name": "Jasper Mobile",
+      "exchange": "NYSE AMERICAN",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 22.6,
+      "market_cap_usd": 424785000
+    },
+    {
+      "symbol": "KNGL",
+      "name": "Knoll Glass",
+      "exchange": "NASDAQ",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 26.2,
+      "market_cap_usd": 424836000
+    },
+    {
+      "symbol": "LRME",
+      "name": "Larch Media",
+      "exchange": "NYSE",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 31.36,
+      "market_cap_usd": 424887000
+    },
+    {
+      "symbol": "MPCE",
+      "name": "Maple Ceramics",
+      "exchange": "NYSE AMERICAN",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 37.89,
+      "market_cap_usd": 424938000
+    },
+    {
+      "symbol": "NVVA",
+      "name": "Nova Valley",
+      "exchange": "NASDAQ",
+      "security_type": "COMMON",
+      "active": true,
+      "currency": "USD",
+      "base_price": 45.68,
+      "market_cap_usd": null
+    }
+  ]
+}
