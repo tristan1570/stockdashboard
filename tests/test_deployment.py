@@ -18,9 +18,17 @@ class DeploymentTests(unittest.TestCase):
     def test_incomplete_configuration_fails(self):
         deploy(None, None)
         with self.assertRaises(ValueError):
-            deploy("https://example.pages.dev", "")
+            deploy(None, "invalid")
         with self.assertRaises(ValueError):
             deploy("http://example.invalid", "invalid")
+
+    @patch("scripts.verify_deployment.time.sleep")
+    @patch("scripts.verify_deployment.build_opener")
+    @patch("scripts.verify_deployment.matches", side_effect=[False, True])
+    def test_git_integration_waits_without_posting(self, compare, build, sleep):
+        deploy("https://example.pages.dev", None)
+        self.assertEqual(compare.call_count, 2)
+        build.return_value.open.assert_not_called()
 
     @patch("scripts.verify_deployment.time.sleep")
     @patch("scripts.verify_deployment.build_opener")

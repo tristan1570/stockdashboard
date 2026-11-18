@@ -4,6 +4,8 @@ Market Daily is a mobile-friendly U.S. equity dashboard with a 30-session archiv
 
 ## Open the dashboard
 
+The hosted demonstration is available on desktop and mobile. [Open Market Daily](https://stockdashboard-1bn.pages.dev/)
+
 Run this command from the project folder using Python 3.12 or later. The included archive is ready to view without installing the updater dependencies.
 
 ```sh

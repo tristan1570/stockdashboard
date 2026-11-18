@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '45 23 * * 1-5'
   workflow_dispatch:
+    inputs:
+      check_deployment:
+        description: Publish this run ID to verify that an Actions commit reaches Pages
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -30,10 +35,17 @@ jobs:
       - name: Validate release and commit changes
         env:
           REFRESH_RESULT: ${{ steps.refresh.outcome }}
+          CHECK_DEPLOYMENT: ${{ inputs.check_deployment }}
+          PAGES_URL: ${{ vars.PAGES_URL }}
         run: |
           if [ "$REFRESH_RESULT" = success ]; then
             python scripts/update_market.py --verify
             git add -- public/data/latest.json public/data/sessions.json public/data/history public/data/status.json
+            if [ "$CHECK_DEPLOYMENT" = true ]; then
+              test -n "$PAGES_URL" || { echo "Set PAGES_URL before testing a deployment."; exit 1; }
+              echo "$GITHUB_RUN_ID/$GITHUB_RUN_ATTEMPT" > public/data/deployment-check.txt
+              git add -- public/data/deployment-check.txt
+            fi
           else
             git add -- public/data/status.json
           fi
