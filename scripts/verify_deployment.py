@@ -26,9 +26,11 @@ def release_files():
 
 def matches(base, files, opener):
     for name, digest in files.items():
-        url = f"{base}/{name}?release={digest[:16]}"
+        path = "" if name == "index.html" else name
+        url = f"{base}/{path}?release={digest[:16]}"
         try:
-            with opener.open(Request(url, headers={"Cache-Control": "no-cache"}), timeout=10) as res:
+            request = Request(url, headers={"Cache-Control": "no-cache", "User-Agent": "MarketDaily-Deployment-Check/1.0"})
+            with opener.open(request, timeout=10) as res:
                 if hashlib.sha256(res.read()).hexdigest() != digest:
                     return False
         except (TimeoutError, URLError):

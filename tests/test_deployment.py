@@ -15,6 +15,13 @@ class DeploymentTests(unittest.TestCase):
         opener.open.return_value = io.BytesIO(b"new")
         self.assertTrue(matches("https://example.pages.dev", files, opener))
 
+    def test_homepage_uses_canonical_pages_route(self):
+        digest = sha256(b"home").hexdigest()
+        opener = Mock()
+        opener.open.return_value = io.BytesIO(b"home")
+        self.assertTrue(matches("https://example.pages.dev", {"index.html": digest}, opener))
+        self.assertEqual(opener.open.call_args.args[0].full_url, f"https://example.pages.dev/?release={digest[:16]}")
+
     def test_incomplete_configuration_fails(self):
         deploy(None, None)
         with self.assertRaises(ValueError):
