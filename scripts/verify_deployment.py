@@ -17,7 +17,7 @@ PUBLIC = Path(__file__).resolve().parents[1] / "public"
 
 def release_files():
     sessions = json.loads((PUBLIC / "data/sessions.json").read_text(encoding="utf-8"))
-    files = ["index.html", "demo.html", "app.js", "styles.css", "data/latest.json", "data/sessions.json", "data/status.json",
+    files = ["index.html", "demo.html", "app.js", "technicals.js", "styles.css", "data/latest.json", "data/sessions.json", "data/status.json",
              "data/history/" + sessions[0] + ".json"]
     if (PUBLIC / "data/deployment-check.txt").is_file():
         files.append("data/deployment-check.txt")

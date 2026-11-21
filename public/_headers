@@ -4,4 +4,4 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: no-referrer
   X-Frame-Options: DENY
-  Content-Security-Policy: default-src 'self'; connect-src 'self'; script-src 'self' https://s3.tradingview.com/external-embedding/embed-widget-screener.js; frame-src https://www.tradingview-widget.com; style-src 'self' 'unsafe-inline'; img-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; connect-src 'self'; script-src 'self' https://s3.tradingview.com/external-embedding/embed-widget-screener.js https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js; frame-src https://www.tradingview-widget.com; style-src 'self' 'unsafe-inline'; img-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'

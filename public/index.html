@@ -8,6 +8,7 @@
   <title>U.S. stock screener | Market Daily</title>
   <link rel="icon" href="./favicon.svg">
   <link rel="stylesheet" href="./styles.css">
+  <script defer src="./technicals.js"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to stock screener</a>
@@ -21,7 +22,9 @@
     <div class="heading"><div>
       <h1>U.S. stock screener</h1>
       <p class="sub">Explore prices, daily moves and market capitalization for the U.S. stocks covered by TradingView. Quotes may be delayed.</p>
+      <a href="#technicals">See daily technical ratings</a>
     </div></div>
+    <div class="market-tools">
     <section aria-label="TradingView U.S. stock screener">
       <div class="tradingview-widget-container">
         <div class="tradingview-widget-container__widget"></div>
@@ -42,6 +45,28 @@
         </script>
       </div>
     </section>
+    <section class="rating-panel" id="technicals" aria-labelledby="rating-title">
+      <h2 id="rating-title">Daily technical rating</h2>
+      <p>Compare the S&amp;P 500 ETF (SPY) with the Nasdaq-100 ETF (QQQ), or look up a stock from the screener. TradingView combines moving averages and oscillators on the daily timeframe.</p>
+      <form id="rating-form">
+        <label for="rating-symbol">Exchange and ticker</label>
+        <div class="rating-controls">
+          <input id="rating-symbol" name="symbol" value="AMEX:SPY" list="rating-benchmarks" required maxlength="28" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="rating-hint">
+          <datalist id="rating-benchmarks">
+            <option value="AMEX:SPY">S&amp;P 500 ETF</option>
+            <option value="NASDAQ:QQQ">Nasdaq-100 ETF</option>
+          </datalist>
+          <button type="submit">Show rating</button>
+        </div>
+        <small id="rating-hint">Examples: SPY, QQQ or NASDAQ:AAPL.</small>
+      </form>
+      <h3 id="rated-symbol" aria-live="polite">AMEX:SPY</h3>
+      <div id="rating-widget"></div>
+      <p id="rating-error" role="status" hidden>TradingView could not load here. Use the technicals link below.</p>
+      <a id="rating-link" href="https://www.tradingview.com/symbols/AMEX-SPY/technicals/" rel="noopener nofollow" target="_blank">View SPY technicals on TradingView</a>
+      <noscript><p>Enable JavaScript to switch symbols and view the rating here.</p></noscript>
+    </section>
+    </div>
     <section class="sources" aria-labelledby="coverage">
       <h2 id="coverage">Data coverage</h2>
       <p>TradingView supplies the quotes and sets the screening universe. Coverage of every eligible U.S. listing, including all companies above $10 billion, is unverified. The session history in the demo archive uses simulated prices.</p>

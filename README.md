@@ -4,6 +4,8 @@ Market Daily displays U.S. stocks in TradingView’s free, provider-hosted scree
 
 ## Open the dashboard
 
+The daily technical rating defaults to SPY, the S&P 500 ETF. Enter QQQ for the Nasdaq-100 ETF or an exchange-qualified stock symbol from the screener. TradingView calculates and displays the indicator rating. Written AI briefs and automated watchlists require separate permission to process data and publish the results. [Technical Analysis widget](https://www.tradingview.com/widget-docs/widgets/symbol-details/technical-analysis/)
+
 The homepage displays the stock screener. The separate demo archive retains 30 simulated trading sessions with three illustrative indices and four rankings of fictional stocks. [Stock screener](https://stockdashboard-1bn.pages.dev/) · [Demo archive](https://stockdashboard-1bn.pages.dev/demo)
 
 Run this command from the project folder using Python 3.12 or later. The included archive is ready to view without installing the updater dependencies.

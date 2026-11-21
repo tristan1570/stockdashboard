@@ -4,6 +4,12 @@ The public homepage displays TradingView’s branded stock screener through its 
 
 The demo archive uses synthetic stock and index observations. They can be reproduced locally and published as a labeled software demonstration. No vendor quote payloads were copied into the fixtures.
 
+## Daily indicators and written briefs
+
+The official TradingView Technical Analysis widget displays moving-average and oscillator ratings. The dashboard passes it a symbol and a daily interval. TradingView's display license does not grant this public site permission to extract its quotes or ratings for automated commentary. [Widget documentation](https://www.tradingview.com/widget-docs/widgets/symbol-details/technical-analysis/) · [TradingView terms, §3](https://www.tradingview.com/policies/)
+
+For a written report generated after the close and served as a static file, source rights must cover the calculations and persistence of the published results. Tiingo's Starter and trial terms prohibit durable storage of derived products. Twelve Data identifies public display of non-real-time derived analytics as a Venture plan use. Neither supplies verified free rights for the proposed stored public brief. Reviewed November 20, 2026. [Tiingo terms, §1.6](https://www.tiingo.com/tos/) · [Twelve Data usage guide](https://support.twelvedata.com/en/articles/5332349-commercial-and-personal-usage)
+
 ## Financial Modeling Prep
 
 The FMP Services Subscription Agreement identifies August 1, 2023 as its last update. Sections 2.2 and 2.2.1 require prior written approval for public display and restrict personal use to the subscriber. Section 2.2.1 also restricts copying or downloading content without prior written approval. FMP's pricing page requires a specific Data Display and Licensing Agreement for display or redistribution. A private repository or password-protected site does not establish approval for storage or display. [FMP terms, §2](https://site.financialmodelingprep.com/terms-of-service) · [FMP display agreement notice](https://site.financialmodelingprep.com/pricing-plans)

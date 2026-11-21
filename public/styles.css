@@ -8,6 +8,19 @@ header{background:#102c49;color:white}.mast{height:66px;display:flex;align-items
 .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:22px;letter-spacing:-.8px;color:white;text-decoration:none}
 nav{height:100%;display:flex;gap:27px}nav a{display:grid;align-items:center;color:#e3ecf5;font-size:14px;font-weight:550;text-decoration:none}nav a[aria-current=page]{box-shadow:inset 0 -3px #86c7ee}
 .tradingview-widget-container{min-height:600px;background:white;border-radius:8px}
+.market-tools{display:grid;gap:18px;grid-template-columns:minmax(0,2fr) minmax(300px,1fr);align-items:start}
+.rating-panel{padding:18px;background:white;border:1px solid var(--line);border-radius:8px;scroll-margin-top:12px}
+.rating-panel p,.rating-panel small{color:var(--sub)}
+.rating-panel p{margin:8px 0 14px;font-size:14px}
+.rating-panel label{font-weight:600;font-size:14px}
+.rating-controls{display:flex;gap:6px;margin:4px 0}
+.rating-controls input,.rating-controls button{min-height:44px;border:1px solid #aebfce;border-radius:5px;font:inherit;padding:5px 9px}
+.rating-controls input{min-width:0;flex:1}
+.rating-controls button{background:var(--ink);color:white}
+.rating-panel h3{margin:15px 0 5px}
+.rating-panel .tradingview-widget-container{min-height:0}
+.rating-panel>a,.heading a{display:inline-block;margin-top:8px;font-size:14px}
+@media(max-width:900px){.market-tools{grid-template-columns:minmax(0,1fr)}}
 h1,h2,h3,p,dl,dd{margin:0}h1{font-size:clamp(32px,3.4vw,48px);letter-spacing:-.055em;line-height:1.12;font-weight:660}h2{font-size:22px;letter-spacing:-.04em;line-height:1.25;font-weight:650}h3{font-size:16px;letter-spacing:-.025em}
 .heading,.section-title,.panel-head,.table-tools,footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .heading{padding:35px 0 23px}.sub,.muted,.date-field,.table-foot,.breadth-top span{color:var(--sub)}.sub{margin-top:7px}.muted,.date-field{font-size:13px}
