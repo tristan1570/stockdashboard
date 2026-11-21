@@ -1,6 +1,8 @@
 # Data rights and deployment scope
 
-**Review date: November 17, 2026.** The public dashboard uses synthetic stock and index observations. They can be reproduced locally and published as a labeled software demonstration. No vendor quote payloads were copied into the fixtures. Names of exchanges and indices identify the intended instruments in the dashboard.
+The public homepage displays TradingView’s branded stock screener through its official embed. TradingView serves the observations directly to the browser and controls the available markets and delays. The site does not extract widget quotes, redistribute them as JSON or store them in the archive. Reviewed November 20, 2026. [TradingView widgets](https://www.tradingview.com/widget/) · [Widget data FAQ](https://www.tradingview.com/widget-docs/faq/data/)
+
+The demo archive uses synthetic stock and index observations. They can be reproduced locally and published as a labeled software demonstration. No vendor quote payloads were copied into the fixtures.
 
 ## Financial Modeling Prep
 

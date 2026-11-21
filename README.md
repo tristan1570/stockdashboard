@@ -1,10 +1,10 @@
 # Market Daily
 
-Market Daily is a mobile-friendly U.S. equity dashboard with a 30-session archive. The public edition uses synthetic prices, volumes, capitalizations and index levels. Each day’s four lists rank the 40-stock demonstration universe and its qualifying large caps. The two free providers reviewed did not establish the rights and coverage required for a public market-wide ranking. [Provider evaluation](docs/API_EVALUATION.md)
+Market Daily displays U.S. stocks in TradingView’s free, provider-hosted screener. The widget opens on gainers and includes TradingView’s screening controls. Data timing and symbol coverage depend on the provider. The website embeds the widget without an API key and stores no TradingView observations. [Widget documentation](https://www.tradingview.com/widget-docs/widgets/screeners/screener/)
 
 ## Open the dashboard
 
-The hosted demonstration is available on desktop and mobile. [Open Market Daily](https://stockdashboard-1bn.pages.dev/)
+The homepage displays the stock screener. The separate demo archive retains 30 simulated trading sessions with three illustrative indices and four rankings of fictional stocks. [Stock screener](https://stockdashboard-1bn.pages.dev/) · [Demo archive](https://stockdashboard-1bn.pages.dev/demo)
 
 Run this command from the project folder using Python 3.12 or later. The included archive is ready to view without installing the updater dependencies.
 
@@ -12,9 +12,9 @@ Run this command from the project folder using Python 3.12 or later. The include
 python -m http.server 8000 --bind 127.0.0.1 --directory public
 ```
 
-Open [the local dashboard](http://127.0.0.1:8000). Select a session, switch between overall and large-cap movers, and choose gainers or losers. Select a ticker to inspect its exchange, volume, comparable previous close and capitalization. The deployment guide explains how to obtain a free URL accessible from an iPhone. [Deployment guide](docs/DEPLOYMENT.md)
+Open [the local dashboard](http://127.0.0.1:8000) with internet access for the widget. Choose **Demo archive** to explore simulated sessions locally. [Deployment guide](docs/DEPLOYMENT.md)
 
-## Run the updater
+## Run the demo archive updater
 
 Create and activate a Python environment. On Windows PowerShell, run the following from the project folder.
 
@@ -26,7 +26,7 @@ py -m venv .venv
 .\.venv\Scripts\python.exe scripts/update_market.py --verify
 ```
 
-On macOS or Linux, use `python3 -m venv .venv` and substitute `.venv/bin/python` for the Windows interpreter path. The CLI uses the current Eastern date, skips exchange holidays and open sessions, and preserves an existing validated release for the same day. Each invocation reports its outcome. The scheduled job uses 23:45 UTC on weekdays. Generation and browser visits each use zero vendor API requests.
+On macOS or Linux, use `python3 -m venv .venv` and substitute `.venv/bin/python` for the Windows interpreter path. The CLI uses the current Eastern date, skips exchange holidays and open sessions, and preserves an existing validated release for the same day. The scheduled job runs at 23:45 UTC on weekdays. TradingView handles quotes independently inside the homepage widget.
 
 For a reproducible simulation in a separate directory, run the following with the environment’s Python interpreter. The fixed clock is the simulated run time. Historical seed entries use the simulated close as their observation and release time.
 

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102c49"><meta name="description" content="Explore synthetic end-of-day U.S. equity sessions, index trends and daily stock movers.">
+  <title>Demo archive | Market Daily</title>
+  <link rel="icon" href="./favicon.svg"><link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to demo archive</a>
+<header><div class="mast wrap">
+  <a class="brand" href="./"><img src="./favicon.svg" alt="" width="34" height="34">Market Daily</a>
+  <nav aria-label="Main navigation"><a href="./">Stock screener</a><a href="#main" aria-current="page">Demo archive</a></nav>
+</div></header>
+<main id="main" class="wrap">
+  <div class="heading"><div><h1>Demo archive</h1><p class="sub" id="session-meta" aria-live="polite">Loading trading session…</p></div>
+    <label class="date-field">Trading session<select id="history" disabled aria-label="Trading session"><option>Loading…</option></select></label>
+  </div>
+  <div class="demo"><strong>Demo data</strong><span>Prices and rankings are simulated. Live market-wide rankings are unavailable.</span></div>
+  <div id="notice" role="status" hidden><span id="message"></span> <button id="retry" hidden>Retry</button></div>
+  <section aria-labelledby="index-title"><div class="section-title"><h2 id="index-title">Market indices</h2><span class="muted">End of day</span></div>
+    <div id="indices" class="indices" aria-live="polite"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
+  </section>
+  <div class="columns">
+    <section class="panel movers" aria-labelledby="movers-title"><div class="panel-head"><h2 id="movers-title">Market movers</h2>
+      <div class="switch" role="group" aria-label="Ranking universe"><button data-group="overall" aria-pressed="true">Overall market</button><button data-group="largecap" aria-pressed="false">Large cap</button></div></div>
+      <div class="table-tools"><div class="direction" role="group" aria-label="Move direction">
+        <button data-side="gainers" aria-pressed="true"><span aria-hidden="true">↗</span> Gainers</button>
+        <button data-side="losers" aria-pressed="false"><span aria-hidden="true">↘</span> Losers</button></div>
+        <span class="muted" id="row-count" aria-live="polite"></span>
+      </div>
+      <table id="movers"><caption class="sr" id="caption">Demo stock rankings</caption>
+        <thead><tr><th scope="col" class="rank">Rank</th><th scope="col">Company</th><th scope="col" class="numeric">Close</th><th scope="col" class="numeric change-col">Change $</th><th scope="col" class="numeric">Change %</th><th scope="col" class="numeric cap-col" hidden>Market cap</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <p class="empty" id="empty" hidden></p>
+      <p class="table-foot" id="table-foot">Ranked by regular-session close-to-close percentage change.</p>
+    </section>
+    <aside>
+      <section class="panel breadth"><h2>Session breadth</h2><p class="muted">Across the demo universe</p>
+        <div class="breadth-top"><strong id="breadth-total">—</strong><span>eligible equities</span></div>
+        <div class="breadth-bar" id="breadth-bar" aria-hidden="true"></div>
+        <dl class="legend"><div><dt><i class="up-dot"></i>Advancing</dt><dd id="advancing">—</dd></div><div><dt><i class="down-dot"></i>Declining</dt><dd id="declining">—</dd></div><div><dt><i class="flat-dot"></i>Unchanged</dt><dd id="unchanged">—</dd></div></dl>
+      </section>
+      <section class="panel details"><h2>Session details</h2><dl><dt>Market status</dt><dd id="market-status">—</dd><dt>Regular close</dt><dd id="closing-time">—</dd><dt>Large-cap threshold</dt><dd>≥ $10 billion USD</dd><dt>Source</dt><dd>Market Daily simulation</dd></dl></section>
+    </aside>
+  </div>
+  <section id="sources" class="sources"><h2>Data sources &amp; methodology</h2><p>Market Daily generates fictional equities and index observations for each completed NYSE session. The archive retains 30 sessions. Each index chart shows simulated daily closes through the selected date.</p>
+    <details><summary>Universe and ranking rules</summary><p>The intended universe covers active U.S. dollar common shares, common REITs and ADRs primarily listed on Nasdaq, NYSE or NYSE American. Funds, preferreds, warrants, units, rights and OTC listings are excluded. Distinct traded share classes retain their own listings. The overall ranking has no price floor and may include volatile microcaps.</p><p>Each return compares the regular close with the previous trading session’s split-comparable close. The large-cap ranking evaluates all eligible companies with a verified market capitalization of at least $10 billion and a cap observation no more than seven calendar days old. Ties sort by ticker.</p></details>
+    <details><summary>Provider coverage and display rights</summary><p>The reviewed free feeds did not establish public redistribution rights and complete coverage of eligible equities. Alpha Vantage’s 20 movers per side cannot establish the largest moves among all large caps. All four lists and all three indices here use synthetic observations.</p><p><a href="https://site.financialmodelingprep.com/pricing-plans">FMP plan and licensing</a> · <a href="https://www.alphavantage.co/terms_of_service/">Alpha Vantage terms</a></p></details>
+  </section>
+</main>
+<footer><div class="wrap"><strong>Market Daily</strong><span>End-of-day equity dashboard. Not investment advice.</span></div></footer>
+<noscript>Enable JavaScript to load a trading session.</noscript>
+</body></html>

@@ -6,7 +6,8 @@ a{color:var(--blue);text-underline-offset:3px}button:focus-visible,a:focus-visib
 .wrap{width:min(1192px,calc(100% - 72px));margin:auto}
 header{background:#102c49;color:white}.mast{height:66px;display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:22px;letter-spacing:-.8px;color:white;text-decoration:none}
-nav{height:100%;display:flex;gap:27px}nav a{display:grid;align-items:center;color:#e3ecf5;font-size:14px;font-weight:550;text-decoration:none}nav a:first-child{box-shadow:inset 0 -3px #86c7ee}
+nav{height:100%;display:flex;gap:27px}nav a{display:grid;align-items:center;color:#e3ecf5;font-size:14px;font-weight:550;text-decoration:none}nav a[aria-current=page]{box-shadow:inset 0 -3px #86c7ee}
+.tradingview-widget-container{min-height:600px;background:white;border-radius:8px}
 h1,h2,h3,p,dl,dd{margin:0}h1{font-size:clamp(32px,3.4vw,48px);letter-spacing:-.055em;line-height:1.12;font-weight:660}h2{font-size:22px;letter-spacing:-.04em;line-height:1.25;font-weight:650}h3{font-size:16px;letter-spacing:-.025em}
 .heading,.section-title,.panel-head,.table-tools,footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .heading{padding:35px 0 23px}.sub,.muted,.date-field,.table-foot,.breadth-top span{color:var(--sub)}.sub{margin-top:7px}.muted,.date-field{font-size:13px}
